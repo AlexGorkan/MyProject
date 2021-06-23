@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class MyFunck : MonoBehaviour
 {
-   
+    private float[] landSquares = new float[3] {0.12f, 0.5f, 0.024f};
+    private float price = 100f;
+
     void Start()
     {
-        //PrintWelcome();
-        //PrintWelcome();
-        //PrintWelcome();
+        
 
         //Divide(5f, 2f);
         //Divide(5, 2);
         //CheckAge(35, "Alexey");
-        CountSquare(60, 20);
+        CountSquare(60f, 20f);
+        CountSquare(100f, 50f);
+        CountSquare(48f, 5f);
 
 
     }
 
     private void CountSquare(float width, float height)
     {
-        float rez = width * height / 100;
+        float rez = (width * height / 100) / price;
         print(rez);
     }
 
@@ -51,11 +53,12 @@ public class MyFunck : MonoBehaviour
         {
             print("Dobro pozhalovat" + yourName);
         }
-        
-        
-            else
-            { 
-            print("Zhdite" + yourName + (18-yourAge));
-            }
-        
+
+
+        else
+        {
+            print("Zhdite" + yourName + (18 - yourAge));
+        }
+
+    }
 }
